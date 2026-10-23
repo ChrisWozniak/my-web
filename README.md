@@ -9,11 +9,10 @@ A fully self-contained personal portfolio website built with HTML, CSS and JavaS
 
 - **Hero section** — introduction with embedded profile photo
 - **About section** — bio, skill tags and stat cards
-- **Photo gallery** — 5 embedded travel & adventure photos
-- **Experience timeline** — animated career history
-- **Interactive map** — Leaflet.js map pinpointing the Pursuit.org training facility in Long Island City, NY
+- **Featured work** — project case studies with screenshots, carousels, and an enlarged-image viewer
+- **Experience timeline** — career foundation and AI-Native Program experience
 - **Contact section** — links to email, LinkedIn and GitHub
-- **Dark / Light mode toggle** — smooth theme switch including map tile swap
+- **Dark / Light mode toggle** — remembers the visitor's selected theme
 
 ---
 
@@ -23,11 +22,9 @@ A fully self-contained personal portfolio website built with HTML, CSS and JavaS
 |---|---|
 | HTML5 | Page structure and content |
 | CSS3 | Styling, layout, animations, theme variables |
-| JavaScript (vanilla) | Theme toggle, map initialisation, scroll animations |
-| [Leaflet.js](https://leafletjs.com/) | Interactive map |
-| [CARTO tile layers](https://carto.com/) | Dark & light map tiles |
+| JavaScript (vanilla) | Theme preference, project carousels, image viewer, and accessible interactions |
 | [Google Fonts](https://fonts.google.com/) | Playfair Display & DM Sans typefaces |
-| Base64 encoding | All images embedded directly in HTML — no external files needed |
+| Local image assets | Project screenshots and profile imagery |
 
 ---
 
@@ -38,7 +35,7 @@ index.html    ← The entire website in one single file
 README.md     ← This file
 ```
 
-No frameworks, no build tools, no dependencies to install. Just open `index.html` in any browser.
+No frameworks, no build tools, and no dependencies to install. Just open `index.html` in any browser.
 
 ---
 
@@ -46,15 +43,7 @@ No frameworks, no build tools, no dependencies to install. Just open `index.html
 
 1. Download `index.html`
 2. Open it in any modern web browser (Chrome, Firefox, Edge, Safari)
-3. That's it — no server or internet connection required (except for the map tiles and fonts)
-
----
-
-## 🗺️ Training Facility Location
-
-**Pursuit.org**  
-47-10 Austell Pl, 2nd Floor  
-Long Island City, NY 11101
+3. That's it — no server is required. Internet access is only needed for the hosted fonts and external links.
 
 ---
 
@@ -68,9 +57,9 @@ Long Island City, NY 11101
 
 ## 📌 Notes
 
-- All photos are embedded as Base64 strings inside the HTML file, so the website works as a single portable file with no image folder required.
-- The dark/light toggle also swaps the map between dark and light tile styles to match the overall theme.
-- The experience timeline items animate in on scroll using the Intersection Observer API.
+- Project imagery is organized in the `assets/` folder to keep the site easy to maintain.
+- The dark/light toggle defaults to dark mode and remembers a visitor's choice for later visits.
+- The project cards support keyboard access, screenshot carousels, and a larger viewer for fine details.
 
 ---
 
